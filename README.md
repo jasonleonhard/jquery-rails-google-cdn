@@ -1,4 +1,15 @@
-# jquery-rails-cdn
+# jquery-rails-google-cdn
+
+I have to give credit to the authors of the gems I combined and modified to make this a reality:
+jquery-rails(https://github.com/styx/jquery-ui-rails-cdn) and jquery-ui-rails-cdn(https://github.com/styx/jquery-ui-rails-cdn).
+
+
+
+
+
+
+
+
 
 Add CDN support to [jquery-rails](https://github.com/rails/jquery-rails).
 
