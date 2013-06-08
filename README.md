@@ -1,17 +1,17 @@
-# jquery-rails-google-cdn
-
+# jquery-rails-google-cdn gem
+=============
 I have to give credit to the authors of the gems I combined and modified to make this a reality:
-[jquery-rails](https://github.com/styx/jquery-ui-rails-cdn) and [jquery-ui-rails-cdn](https://github.com/styx/jquery-ui-rails-cdn).
-
-Please note this gem will replace [jquery-rails](https://github.com/rails/jquery-rails) and serve your jquery files from the google cdn.
+[jquery-rails](https://github.com/styx/jquery-ui-rails-cdn) and [jquery-ui-rails-cdn](https://github.com/styx/jquery-ui-rails-cdn).  This gem will replace [jquery-rails](https://github.com/rails/jquery-rails) and serve your jquery files from the google cdn, if possible, than fall back to your local copies if neccessary.
 
 Serving jQuery from a publicly available [CDN](http://en.wikipedia.org/wiki/Content_Delivery_Network) has clear benefits:
 
 * **Speed**: Users will be able to download jQuery from the closest physical location.
 * **Caching**: CDN is used so widely that potentially your users may not need to download jQuery at all.
-* **Parallelism**: Browsers have a limitation on how many connections can be made to a single host. Using CDN for jQuery offloads a big one.
+* **Parallelism**: Browsers have a limitation on how many connections can be made to a single host. Using a CDN for jQuery offloads a big one.
 
-## Features
+=============
+
+### Features
 
 This gem offers the following features:
 
