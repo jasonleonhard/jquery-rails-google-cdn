@@ -1,17 +1,9 @@
 # jquery-rails-google-cdn
 
 I have to give credit to the authors of the gems I combined and modified to make this a reality:
-jquery-rails(https://github.com/styx/jquery-ui-rails-cdn) and jquery-ui-rails-cdn(https://github.com/styx/jquery-ui-rails-cdn).
+[jquery-rails](https://github.com/styx/jquery-ui-rails-cdn) and [jquery-ui-rails-cdn](https://github.com/styx/jquery-ui-rails-cdn).
 
-
-
-
-
-
-
-
-
-Add CDN support to [jquery-rails](https://github.com/rails/jquery-rails).
+Please note this gem will replace [jquery-rails](https://github.com/rails/jquery-rails) and serve your jquery files from the google cdn.
 
 Serving jQuery from a publicly available [CDN](http://en.wikipedia.org/wiki/Content_Delivery_Network) has clear benefits:
 
@@ -23,11 +15,23 @@ Serving jQuery from a publicly available [CDN](http://en.wikipedia.org/wiki/Cont
 
 This gem offers the following features:
 
-* Supports multiple CDN. (Google, Microsoft, jquery.com, etc.)
-* jQuery version is automatically detected via `jquery-rails`.
-* Automatically fallback to jquery-rails' bundled jQuery when:
+* Supports Google CDN
+* jQuery version is set in your application.rb file
+* Automatically fallback to local jquery min files stored in your vendor directory:
   * You're on a development environment, so that you can work offline.
   * The CDN is down or unreachable.
+
+
+
+
+
+
+
+
+
+
+
+
 
 On top of that, if you're using asset pipeline, you may have noticed that the major chunks of the code in combined `application.js` is jQuery. Implications of externalizing jQuery from `application.js` are:
 
