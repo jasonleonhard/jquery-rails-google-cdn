@@ -22,7 +22,7 @@ module Jquery::Rails::Google::Cdn
   class Railtie < Rails::Railtie
     initializer 'jquery-rails-google-cdn.action_view' do |app|
       ActiveSupport.on_load(:action_view) do
-        include Jquery::Rails::Cdn::ActionViewExtensions
+        include Jquery::Rails::Google::Cdn::ActionViewExtensions
       end
     end
   end
