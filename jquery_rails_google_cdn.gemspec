@@ -1,6 +1,4 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/version', __FILE__)
-
 Gem::Specification.new do |s|
 
   s.authors           = ["Chris Hough"]
@@ -9,7 +7,7 @@ Gem::Specification.new do |s|
   s.summary           = %q{A s to serve jQuery from the Google CDN with fall back protection.}
   s.homepage          = "https://github.com/chrishough/jquery-rails-google-cdn"
 
-  s.files             = ["lib/jquery_rails_google_cdn.rb"]
+  s.files             = `git ls-files`.split("\n")
   s.require_paths     = ["lib"]
 
   s.name              = "jquery-rails-google-cdn"
