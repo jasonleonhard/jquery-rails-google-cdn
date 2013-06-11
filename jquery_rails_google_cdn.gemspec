@@ -9,10 +9,12 @@ Gem::Specification.new do |s|
   s.summary           = %q{A s to serve jQuery from the Google CDN with fall back protection.}
   s.homepage          = "https://github.com/chrishough/jquery-rails-google-cdn"
 
-  s.files             = ["lib/jquery-rails-google-cdn.rb"]
-  s.name              = "jquery-rails-google-cdn"
+  s.files             = ["lib/jquery_rails_google_cdn.rb"]
   s.require_paths     = ["lib"]
+
+  s.name              = "jquery-rails-google-cdn"
   s.licenses          = "GPL"
-  s.version           = Jquery::Rails::Google::Cdn::VERSION
+  s.version           = '0.0.2'
 
 end
+
