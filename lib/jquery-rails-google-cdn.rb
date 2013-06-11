@@ -3,7 +3,7 @@ module Jquery::Rails::Google::Cdn
 
     OFFLINE = (Rails.env.development? or Rails.env.test?)
     URL = {
-      :google_jquery => "//ajax.googleapis.com/ajax/libs/jquery/#{JQUERY_VERSION}/jquery.min.js",
+      :google_jquery => "//ajax.googleapis.com/ajax/libs/jquery/#{JQUERY_VERSION}/jquery.min.js"
     }
 
     def jquery_url(name)

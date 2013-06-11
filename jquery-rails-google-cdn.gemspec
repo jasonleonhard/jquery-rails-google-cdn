@@ -11,7 +11,6 @@ Gem::Specification.new do |s|
 
   s.files             = ["lib/jquery-rails-google-cdn.rb"]
   s.name              = "jquery-rails-google-cdn"
-  s.rubyforge_project = "jquery rails google cdn"
   s.require_paths     = ["lib"]
   s.licenses          = "GPL"
   s.version           = Jquery::Rails::Google::Cdn::VERSION
