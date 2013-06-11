@@ -1,4 +1,4 @@
-# jquery-rails-google-cdn gem
+### jquery-rails-google-cdn gem
 
 =============
 
