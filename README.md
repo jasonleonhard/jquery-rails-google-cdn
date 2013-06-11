@@ -1,7 +1,3 @@
-### jquery-rails-google-cdn gem
-
-=============
-
 I have to give credit to the authors of the gems I combined and modified to make this a reality:
 [jquery-rails](https://github.com/styx/jquery-ui-rails-cdn) and [jquery-ui-rails-cdn](https://github.com/styx/jquery-ui-rails-cdn).  This gem will replace [jquery-rails](https://github.com/rails/jquery-rails) and serve your jquery files from the google cdn, if possible, than fall back to your local copies if neccessary.
 
@@ -44,14 +40,16 @@ If you're using the asset pipeline with Rails 4+,
 2. Download the version of jquery you want to use from the [google cdn](https://developers.google.com/speed/libraries/devguide#jquery) and save the file to this directory. The file should look something like `jquery.min.js`.
 3. Add this line to your application's Gemfile: `gem 'jquery-rails-google-cdn'`
 4. Add these lines to your application.rb file to set the version of jQuery you are using and to make sure the asset pipeline makes it available:
-```
+
+```ruby
 config.assets.precompile += ["jquery.min.js"]
 config.jquery_version = "2.0.2"
 ```
 5. Finally add this section to your layouts file.
+
 ```ruby
- <%= javascript_include_tag :google_jquery %>
- <%= javascript_include_tag "application" %>
+<%= javascript_include_tag :google_jquery %>
+<%= javascript_include_tag "application" %>
 ```
 
 It will generate the following on production:
