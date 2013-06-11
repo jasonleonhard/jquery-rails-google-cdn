@@ -17,8 +17,6 @@
 /log/*.log
 /tmp
 
-# Ignore application configuration
-/config/application.yml
 
 # APPLICATION #
 ###################
@@ -50,7 +48,7 @@
 
 # OS generated files #
 ######################
-.DS_Store
+*.DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
