@@ -9,9 +9,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{A gem to serve jQuery from the Google CDN with fall back protection.}
   gem.homepage      = "https://github.com/chrishough/jquery-rails-google-cdn"
 
-  gem.files         = `git ls-files`.split($\)
-  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.files         = ["lib/jquery-rails-google-cdn.rb"]
   gem.name          = "jquery-rails-google-cdn"
   gem.rubyforge_project = "jquery rails google cdn"
   gem.require_paths = ["lib"]
