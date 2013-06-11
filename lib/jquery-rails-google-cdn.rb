@@ -1,6 +1,6 @@
-module Jquery::Rails::Cdn
+module Jquery::Rails::Google::Cdn
   module ActionViewExtensions
-    JQUERY_VERSION = Jquery::Rails::JQUERY_VERSION
+
     OFFLINE = (Rails.env.development? or Rails.env.test?)
     URL = {
       :google_jquery => "//ajax.googleapis.com/ajax/libs/jquery/#{JQUERY_VERSION}/jquery.min.js",
