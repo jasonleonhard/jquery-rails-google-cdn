@@ -47,7 +47,7 @@ config.jquery_version = "2.0.2"
 ```
 5. Finally add this section to your layouts file.
 
-```ruby
+```html
 <%= javascript_include_tag :google_jquery %>
 <%= javascript_include_tag "application" %>
 ```
