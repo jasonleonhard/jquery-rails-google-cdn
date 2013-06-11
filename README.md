@@ -21,18 +21,6 @@ This gem offers the following features:
   * You're on a development environment, so that you can work offline.
   * The CDN is down or unreachable.
 
-
-
-
-
-
-
-
-
-
-
-
-
 On top of that, if you're using asset pipeline, you may have noticed that the major chunks of the code in combined `application.js` is jQuery. Implications of externalizing jQuery from `application.js` are:
 
 * Updating your JS code won't evict the entire cache in browsers.
@@ -40,47 +28,31 @@ On top of that, if you're using asset pipeline, you may have noticed that the ma
   * Your code changes more often than jQuery upgrades, right?
 * `rake assets:precompile` will run faster and use less memory.
 
-Changelog:
+=============
 
-* v1.0.0: Options like `defer: true` or `data-turbolinks-eval: false` are allowed to be passed. (Thanks to @mkitt)
-* v0.4.0: Added Cloudflare. (Thanks to @damonmorgan)
-* v0.3.0: Microsoft and Yandex are now always scheme-less. (Thanks to @atipugin)
-* v0.2.1: Use minified version for Yandex. (Thanks to @atipugin)
-* v0.2.0: (Incompatible Change) Google CDN is now always scheme-less. Add Yandex CDN for Russian users. (Thanks to @ai)
-* v0.1.0: Added `:google_schemeless` for sites that support both SSL and non-SSL.
-* v0.0.1: Initial release
+### Installation
 
-## Installation
+If you're using the asset pipeline with Rails 3.1+,
 
-Add this line to your application's Gemfile:
+- Start by removing `//= require jquery` from `application.js`.
 
+If you're using the asset pipeline with Rails 4+,
+
+1. Create the jQuery vendor directory:  `mkdir vendor/assets/javascripts/jquery`
+2. Download the version of jquery you want to use from the [google cdn](https://developers.google.com/speed/libraries/devguide#jquery) and save the file to this directory. The file should look something like `jquery.min.js`.
+3. Add this line to your application's Gemfile: `gem 'jquery-rails-google-cdn'`
+4. Add these lines to your application.rb file to set the version of jQuery you are using and to make sure the asset pipeline makes it available:
+```
+config.assets.precompile += ["jquery.min.js"]
+config.jquery_version = "2.0.2"
+```
+5. Finally add this section to your layouts file.
 ```ruby
-gem 'jquery-rails-cdn'
+ <%= javascript_include_tag :google_jquery %>
+ <%= javascript_include_tag "application" %>
 ```
 
-## Usage
-
-This gem adds two methods `jquery_include_tag` and `jquery_url`.
-
-If you're using asset pipeline with Rails 3.1+,
-
-- Remove `//= require jquery` from `application.js`.
-- Put the following line in `config/application.rb`, so that jquery.js will be served from your server when CDN is not available.
-
-```ruby
-config.assets.precompile += ['jquery.js']
-```
-
-Then in layout:
-
-```ruby
-= jquery_include_tag :google
-= javascript_include_tag 'application'
-```
-
-Note that valid CDN symbols are `:google`, `:microsoft`, `:jquery`, `:cloudflare` and `:yandex`.
-
-Now, it will generate the following on production:
+It will generate the following on production:
 
 ```html
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js" type="text/javascript"></script>
@@ -91,7 +63,7 @@ window.jQuery || document.write(unescape('%3Cscript src="/assets/jquery-3aaa3fa0
 </script>
 ```
 
-on development:
+It will generate the following on development:
 
 ```html
 <script src="/assets/jquery.js?body=1" type="text/javascript"></script>
@@ -102,3 +74,10 @@ If you want to check the production URL, you can pass `:force => true` as an opt
 ```ruby
 jquery_include_tag :google, :force => true
 ```
+
+=============
+
+###Changelog
+
+* v0.0.1: Initial release
+
