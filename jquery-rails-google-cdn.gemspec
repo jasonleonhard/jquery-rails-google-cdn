@@ -1,3 +1,4 @@
+
 # -*- encoding: utf-8 -*-
 Gem::Specification.new do |s|
 
@@ -12,7 +13,7 @@ Gem::Specification.new do |s|
 
   s.name              = "jquery-rails-google-cdn"
   s.licenses          = "GPL"
-  s.version           = '0.0.3'
+  s.version           = '0.0.4'
 
 end
 

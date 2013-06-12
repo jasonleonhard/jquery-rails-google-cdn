@@ -1,5 +1,5 @@
 I have to give credit to the authors of the gems I combined and modified to make this a reality:
-[jquery-rails](https://github.com/styx/jquery-ui-rails-cdn) and [jquery-ui-rails-cdn](https://github.com/styx/jquery-ui-rails-cdn).  This gem will utilize [jquery-rails](https://github.com/rails/jquery-rails) however, it will serve your jquery files from the google cdn, if possible, than fall back to your local copies if neccessary.
+[jquery-rails-cdn](https://github.com/kenn/jquery-rails-cdn) and [jquery-ui-rails-cdn](https://github.com/styx/jquery-ui-rails-cdn).  This gem will utilize [jquery-rails](https://github.com/rails/jquery-rails) however, it will serve your jquery files from the google cdn, if possible, than fall back to your local copies if neccessary.
 
 Serving jQuery from a publicly available [CDN](http://en.wikipedia.org/wiki/Content_Delivery_Network) has clear benefits:
 
