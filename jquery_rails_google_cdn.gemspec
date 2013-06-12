@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
 
   s.name              = "jquery-rails-google-cdn"
   s.licenses          = "GPL"
-  s.version           = '0.0.2'
+  s.version           = '0.0.3'
 
 end
 
