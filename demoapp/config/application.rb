@@ -28,6 +28,6 @@ module Demoapp
     # Compile local jquery downloads in case the google cdn is not available
     config.assets.precompile += ["jquery.min.js"]
     config.jquery_version = "2.0.2"
-
+    
   end
 end
