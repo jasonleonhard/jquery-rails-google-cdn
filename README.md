@@ -1,0 +1,2 @@
+jquery-rails-google-cdn
+=======================
