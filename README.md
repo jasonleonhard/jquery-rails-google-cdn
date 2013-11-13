@@ -101,6 +101,3 @@ window.jQuery || document.write(unescape('%3Cscript src="/assets/jquery.min.js">
 * v0.0.3: Bug Fixes
 * v0.0.2: Changed up initial workflow, forking even further from the previous authors
 * v0.0.1: Initial release
-=======
-jquery-rails-google-cdn
-=======================
