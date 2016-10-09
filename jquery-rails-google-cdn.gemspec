@@ -8,5 +8,5 @@ Gem::Specification.new do |s|
   s.require_paths     = ["lib"]
   s.name              = "jquery-rails-google-cdn"
   s.licenses          = "GPL"
-  s.version           = '0.0.5'
+  s.version           = '0.0.6'
 end
